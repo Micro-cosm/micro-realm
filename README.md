@@ -1,15 +1,20 @@
-# firebase-emulator
-Docker build process for containerized Google Firebase Emulator
+# MicroRealm
 
-`docker pull ehealthafrica/firebase-emulator:latest`
+_A fully configured base Firebase configuration that serves as the controller for a robust, albeit simplistic, micro-frontend(aka **miffy**) architecture.
+Because our of the shared common purpose, **we are quick to respond to your hackathon needs... your win IS our win!**_
 
-See [emulator documentation](https://firebase.google.com/docs/emulator-suite/install_and_configure) and sample docker-compose.yml for image usage.
-To change default behavior, create a `firebase.json` and mount into the volume @ `/app/firebase.json` as shown in the included compose file.
+----
 
+This sole purpose of this repo is to coordinate the fledgling Micro-cosm project and serves as just an example of how one might leverage
+the Firebase platform to create a cohesive, yet loosely-coupled, set of miffies.  This assumes you have enabled the firebase cli for access to
+your own GCP project. 
 
-```
-curl -sL https://firebase.tools | bash
-firebase login
-firebase login:ci
+This project is optimized for the quick enablement and discovery of new ideas.  Thus far, minimal security
+and performance consideration has been applied.  Although suggestions will be sprinkled throughout the project
+to address such concerns and others, it is really beyond the scope of the overarching project and deserves a level
+of attention appropriate to your use.  **Please use freely, but at your own risk.**
 
-```
+## Deploy
+
+###### After reviewing and appropriately updating the firebase.json(provided) and adding your .firebaserc file, just run the following to deploy to your existing Firebase project
+`firebase deploy`
