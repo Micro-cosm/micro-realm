@@ -1,0 +1,11 @@
+{
+	"projects":	{ "default": "weja-us" },
+	"targets":	{
+		"weja-us": {
+    		"hosting": {
+        		"prod":		[ "wejafoo" ],
+        		"stage":	[ "wejatoo" ]
+      		}
+      	}
+	}
+}

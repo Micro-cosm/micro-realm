@@ -1,0 +1,30 @@
+{
+    "hosting": [
+        {
+            "target": "prod",
+            "public": "public/prod",
+            "ignore": [ "firebase.json", "**/node_modules/**" ],
+            "rewrites": [
+                { "source": "/auth/**",     "run": { "serviceId": "auth-weja-us-micro-auth-prod" }},
+                { "source": "/private/**",  "run": { "serviceId": "private-weja-us-micro-private-prod" }},
+            ]
+        }, {
+            "target": "stage",
+            "public": "public/stage",
+            "ignore": [ "firebase.json", "**/node_modules/**" ],
+            "rewrites": [
+                { "source": "/auth/**",     "run": { "serviceId": "auth-weja-us-micro-auth-stage" }},
+                { "source": "/private/**",  "run": { "serviceId": "private-weja-us-micro-private-stage" }},
+                { "source": "/hello",       "run": { "serviceId": "helloworld" }}
+            ]
+        }
+    ],
+    "emulators": {
+        "firestore":    { "port": "8080", "host": "0.0.0.0" },
+        "ui":           { "port": "4000", "host": "0.0.0.0", "enabled": true },
+        "functions":    { "port": "5001" },
+        "database":     { "port": "9000", "host": "0.0.0.0" },
+        "pubsub":       { "port": "8085", "host": "0.0.0.0" },
+        "hosting":      { "host": "0.0.0.0" }
+    }
+}
