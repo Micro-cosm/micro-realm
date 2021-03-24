@@ -4,44 +4,40 @@
             "target":   "prod",
             "ignore":   ["firebase.json", "**/node_modules/**"],
             "public":   "public/prod",
-            "headers":  [
-                { "source": "/",                        "headers": [
-                    { "key": "Cache-Control",               "value": "private, max-age=0, no-cache"   },
-                    { "key": "Access-Control-Allow-Origin", "value" : "*"                             }
-                ]}
-            ],
+            "headers":  [{ "source": "/", "headers": [
+                {"key": "Cache-Control",               "value": "private, max-age=0, no-cache"},
+                {"key": "Access-Control-Allow-Origin", "value" : "*"                          }
+            ]}],
             "rewrites": [
-                { "source": "/auth/**",         "run": { "serviceId": "auth-prod-weja-us-micro-auth"                            }},
-                { "source": "/cms",             "run": { "serviceId": "cms-prod-weja-us-micro-cms"                              }},
-                { "source": "/private/**",      "run": { "serviceId": "private-prod-weja-us-micro-private"                      }},
-                { "source": "/priv-start/**",   "run": { "serviceId": "priv-start-prod-weja-us-micro-client-private-starter"    }},
-                { "source": "/public/**",       "run": { "serviceId": "public-prod-weja-us-micro-public"                        }},
-                { "source": "/pub-start/**",    "run": { "serviceId": "pub-start-prod-weja-us-micro-client-public-starter"      }}
+                {"source": "/auth/**",       "run": { "serviceId": "auth-prod-weja-us-micro-auth"                        }},
+                {"source": "/cms",           "run": { "serviceId": "cms-prod-weja-us-micro-cms"                          }},
+                {"source": "/form/**",       "run": { "serviceId": "form-prod-weja-us-micro-form"                        }},
+                {"source": "/private/**",    "run": { "serviceId": "private-prod-weja-us-micro-private"                  }},
+                {"source": "/public/**",     "run": { "serviceId": "public-prod-weja-us-micro-public"                    }},
+                {"source": "/priv-start/**", "run": { "serviceId": "priv-start-prod-weja-us-micro-client-private-starter"}},
+                {"source": "/pub-start/**",  "run": { "serviceId": "pub-start-prod-weja-us-micro-client-public-starter"  }}
             ]
         }, {
-            "target":   "stage",
-            "ignore":   ["firebase.json", "**/node_modules/**"],
-            "public":   "public/stage",
-            "headers":  [
-                { "source": "/",                      "headers": [
-                    { "key": "Cache-Control",               "value": "private, max-age=0, no-cache" },
-                    { "key": "Access-Control-Allow-Origin", "value" : "*"                           }
+            "target": "stage",
+            "ignore": ["firebase.json", "**/node_modules/**"],
+            "public": "public/stage",
+            "headers": [
+                {"source": "/", "headers": [
+                    {"key": "Cache-Control",               "value": "private, max-age=0, no-cache"},
+                    {"key": "Access-Control-Allow-Origin", "value" : "*"                          }
                 ]},
-                { "source": "**/*",                   "headers": [
-                    { "key": "Cache-Control",               "value": "private, max-age=0, no-cache" }
-                ]},
-                { "source": "**/*.@(js|css|jpg|png)", "headers": [
-                    { "key": "Cache-Control",               "value": "max-age=31536000"             }
-                ]}
+                {"source": "**/*",                   "headers": [{"key": "Cache-Control", "value": "private, max-age=0, no-cache"}]},
+                {"source": "**/*.@(js|css|jpg|png)", "headers": [{"key": "Cache-Control", "value": "max-age=31536000"            }]}
             ],
             "rewrites": [
-                { "source": "/auth/**",       "run": { "serviceId": "auth-stage-weja-us-micro-auth"                             }},
-                { "source": "/cms",           "run": { "serviceId": "cms-stage-weja-us-micro-cms"                               }},
-                { "source": "/private/**",    "run": { "serviceId": "private-stage-weja-us-micro-private"                       }},
-                { "source": "/priv-start/**", "run": { "serviceId": "priv-start-stage-weja-us-micro-client-private-starter"     }},
-                { "source": "/public/**",     "run": { "serviceId": "public-stage-weja-us-micro-public"                         }},
-                { "source": "/pub-start/**",  "run": { "serviceId": "pub-start-stage-weja-us-micro-client-public-starter"       }},
-                { "source": "/hello",         "run": { "serviceId": "helloworld"                                                }}
+                {"source": "/hello",         "run": {"serviceId": "helloworld"                                           }},
+                {"source": "/auth/**",       "run": {"serviceId": "auth-stage-weja-us-micro-auth"                        }},
+                {"source": "/cms",           "run": {"serviceId": "cms-stage-weja-us-micro-cms"                          }},
+                {"source": "/form/**",       "run": {"serviceId": "form-stage-weja-us-micro-form"                        }},
+                {"source": "/private/**",    "run": {"serviceId": "private-stage-weja-us-micro-private"                  }},
+                {"source": "/public/**",     "run": {"serviceId": "public-stage-weja-us-micro-public"                    }},
+                {"source": "/priv-start/**", "run": {"serviceId": "priv-start-stage-weja-us-micro-client-private-starter"}},
+                {"source": "/pub-start/**",  "run": {"serviceId": "pub-start-stage-weja-us-micro-client-public-starter"  }}
             ]
         }
     ]
