@@ -32,6 +32,7 @@
             "rewrites": [
                 {"source": "/hello",            "run": {"serviceId": "helloworld"                                           }},
                 {"source": "/auth/**",          "run": {"serviceId": "auth-stage-weja-us-micro-auth"                        }},
+                {"source": "/auth-element/**",  "run": {"serviceId": "auth-element-stage-weja-us-micro-auth-element"        }},
                 {"source": "/cms",              "run": {"serviceId": "cms-stage-weja-us-micro-cms"                          }},
                 {"source": "/form/**",          "run": {"serviceId": "form-stage-weja-us-micro-form"                        }},
                 {"source": "/form-element/**",  "run": {"serviceId": "form-element-stage-weja-us-micro-form-element"        }},
