@@ -2,6 +2,7 @@
 
 .firebase
 .firebaserc
+
 **/secrets
 *.SAVE
 .ARCHIVE
