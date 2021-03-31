@@ -30,16 +30,17 @@
                 {"source": "**/*.@(js|css|jpg|png)", "headers": [{"key": "Cache-Control", "value": "max-age=31536000"            }]}
             ],
             "rewrites": [
-                {"source": "/hello",            "run": {"serviceId": "helloworld"                                           }},
-                {"source": "/auth/**",          "run": {"serviceId": "auth-stage-weja-us-micro-auth"                        }},
-                {"source": "/auth-element/**",  "run": {"serviceId": "auth-element-stage-weja-us-micro-auth-element"        }},
-                {"source": "/cms",              "run": {"serviceId": "cms-stage-weja-us-micro-cms"                          }},
-                {"source": "/form/**",          "run": {"serviceId": "form-stage-weja-us-micro-form"                        }},
-                {"source": "/form-element/**",  "run": {"serviceId": "form-element-stage-weja-us-micro-form-element"        }},
-                {"source": "/private/**",       "run": {"serviceId": "private-stage-weja-us-micro-private"                  }},
-                {"source": "/public/**",        "run": {"serviceId": "public-stage-weja-us-micro-public"                    }},
-                {"source": "/priv-start/**",    "run": {"serviceId": "priv-start-stage-weja-us-micro-client-private-starter"}},
-                {"source": "/pub-start/**",     "run": {"serviceId": "pub-start-stage-weja-us-micro-client-public-starter"  }}
+                {"source": "/hello",                "run": {"serviceId": "helloworld"                                            }},
+                {"source": "/auth/**",              "run": {"serviceId": "auth-stage-weja-us-micro-auth"                         }},
+                {"source": "/auth-element/**",      "run": {"serviceId": "auth-element-stage-weja-us-micro-auth-element"         }},
+                {"source": "/cms",                  "run": {"serviceId": "cms-stage-weja-us-micro-cms"                           }},
+                {"source": "/form/**",              "run": {"serviceId": "form-stage-weja-us-micro-form"                         }},
+                {"source": "/form-element/**",      "run": {"serviceId": "form-element-stage-weja-us-micro-form-element"         }},
+                {"source": "/private/**",           "run": {"serviceId": "private-stage-weja-us-micro-private"                   }},
+                {"source": "/private-element/**",   "run": {"serviceId": "private-element-stage-weja-us-micro-private-element"   }},
+                {"source": "/public/**",            "run": {"serviceId": "public-stage-weja-us-micro-public"                     }},
+                {"source": "/priv-start/**",        "run": {"serviceId": "priv-start-stage-weja-us-micro-client-private-starter" }},
+                {"source": "/pub-start/**",         "run": {"serviceId": "pub-start-stage-weja-us-micro-client-public-starter"   }}
             ]
         }
     ]
