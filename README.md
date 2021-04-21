@@ -1,5 +1,7 @@
 # MicroRealm
 
+# This project has moved to: [micro-mifedom](https://github.com/Micro-cosm/micro-mifedom)
+
 _A fully configured base Firebase configuration that serves as the controller for a robust, albeit simplistic, micro-frontend(aka **miffy**) architecture.
 Because our of the shared common purpose, **we are quick to respond to your hackathon needs... your win IS our win!**_
 
